@@ -1,0 +1,29 @@
+1 MIGRAR PROYECTO  A TS 
+    ojo rama de git o backup 
+2 CONFIGURACIONES PARA TYPESCRIPT
+    1 instalar TS y tipos de node
+        npm i -D typescript @types/node
+    2 inicializar el archivo de conf de TS 
+        npx tsc --init --outDir dist/ --rootDir src
+    3 configurar nodemon
+        npm i -D ts-node nodemon
+    4 crer  archivo nodemon.json  en raiz del PROYECTO
+        {
+            "watch": ["src"],
+            "ext": ".ts,.js",
+            "ignore": [],
+            "exec": "npx ts-node ./src/app.ts"
+        }
+    5 scrips
+        "dev": "nodemon",
+    6 instalat hta rimraf
+        npm install -D rimraf
+    7 mas scripts
+        "build": "rimraf ./dist && tsc",
+        "start": "npm run build && node dist/app.js"
+
+ahora migrar archivos empezando por 
+app.js      app.ts
+ahora 1x1 cambio todos a ts
+
+    

@@ -1,0 +1,61 @@
+Testing
+    facil de leer y escribir
+    confiable
+    rapida
+    unitario
+AAA => Arrange -Act -Assert
+Pasos para agregar pruebas al modulo bases:
+    1- si no tenemos node_modules hacemos npm i para instala dependencias que esta en package.json
+        > npm i
+    2- puede q tengan o no los archivos de log   no imp!
+    3- si no esta crear el archivo .gitignore
+          .gitignore
+            node_modules/
+            *.log
+            .DS_Store
+    4- ir a la terminar y ejecutar
+            npm run dev
+    5- CONFIGURACION JEST 
+        archivo en git
+
+Pasos para configurar Jest con TypeScript, en Node
+0-Documentación oficial sobre Jest
+        https://jestjs.io/docs/getting-started
+1-Instalaciones de desarrollo (super test es útil para probar Express)
+        npm install -D jest @types/jest ts-jest supertest
+
+            esto me dio error eintegrity para solucionarlo segui 
+            https://www.geeksforgeeks.org/how-to-fix-npm-err-code-eintegrity/
+            haciendo:
+                 npm cache clean --force    
+                 npm install lodash 
+            SE SOLUCIONO!!!!!
+
+2-Crear archivo de configuración de Jest
+        npx jest --init
+            respuestas 1 - si/no da igual-    2- si    3-node   4-yes 5-v8 6- ahora ponemos no paraaprender a hacerlo pero conviene YES en adelante
+
+3-En el archivo jest.config.js configurar
+        preset: 'ts-jest',
+        testEnvironment: "jest-environment-node",
+
+// Opcional - The paths to modules that run some code to configure or set up the testing environment before each test
+// setupFiles: ['dotenv/config'],
+4- Crear scripts en el package.json
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "test:coverage": "jest --coverage",
+    6-si da error el archivo tsconfig.json  
+      podemos añadir esta configuración justo antes del compilerOptions 
+      (o después del mismo, da igual)
+        {
+           "include": ["src/**/*"],
+           "exclude": ["node_modules", "**/*.spec.ts","**/*.test.ts"],
+           "compilerOptions": {
+                /* Visit https://aka.ms/tsconfig to read more about this file */
+        ........
+    7- ahora creamos los archivos de test
+    8- npm run test 
+       npm run test:watch
+    9- nombres de archivos de test mismo nombre y estrucutara mas  .test.ts
+    10- 

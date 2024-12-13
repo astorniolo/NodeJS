@@ -1,0 +1,20 @@
+usando consola de inspeccionar 
+
+const msg1="hola   mundo";
+undefined
+console.log(msg1)
+hola   mundo 
+
+msg1
+"hola   mundo" 
+
+usando cmd
+    
+C:\Users\SIAG30>node
+Welcome to Node.js v20.12.1.
+Type ".help" for more information.
+> const msg2="holis";
+undefined
+> msg2
+'holis'
+>

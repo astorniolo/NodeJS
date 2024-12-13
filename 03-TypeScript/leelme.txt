@@ -1,0 +1,8 @@
+1 crear el proyecto    :  npm  init -y   //-y pone valores por defecto
+2 CONFIGURACIONES PARA TYPESCRIPT
+    npm i -D typescript @types/node
+    cambia app.js a   app.ts
+    npx tsc --init --outDir dist/ --rootDir src
+    npx nodemon dist/app
+    
+    archivo nodemon.json
