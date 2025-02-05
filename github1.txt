@@ -24,3 +24,20 @@ git push -u origin main
 git remote add origin https://github.com/astorniolo/NodeJS.git
 git branch -M main
 git push -u origin main
+-----------------------------------------------------------------
+Subir repository
+1 crear repo en git hub 
+		https://github.com/astorniolo/NodeJS.git
+2 echo "# NodeJS" >> README.md
+3 git init
+4 git add .
+5 git commit -m "first commit"
+6 git branch -M main
+7 git remote add origin https://github.com/astorniolo/NodeJS.git
+		esto me dio error "remote origin already exists."
+		segui instrucciones de https://stackoverflow.com/questions/10904339/github-fatal-remote-origin-already-exists
+		use the command "git remote rm origin" 
+		despues volvi a intentar y funciono!!!!
+8 git push -u origin main
+
+
