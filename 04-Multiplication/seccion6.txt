@@ -1,0 +1,29 @@
+Seccion 6 : Aplicacion de Consola - Clean Arquitecture - Primeros pasos 
+
+Temas puntuales de la sección
+Esta sección es muy importante ya que aprenderemos conceptos de Node como Argv (Argument Values)
+ y empezaremos a introducir el concepto de la arquitectura limpia: UseCases
+
+Puntualmente veremos:
+    1-Funciones asíncronas auto-invocadas
+    2-Argumentos de consola
+    3-Banderas y opciones
+    4-Yargs
+    5-Configuración de Yargs
+    6-Instalación de dependencias
+        a-   Versión específica
+        b-   Versión futura
+        c-    Versión actual
+    7-    Casos de Uso
+    8-     Y más
+
+El objetivo que busco con esta sección, es ir introduciéndolos poco a poco, en los conceptos necesarios para entrar tranquila e indoloramente 
+a la arquitectura limpia en nuestras aplicaciones de Node, y a sí, poder hacer código que es fácil de mantener y actualizar.
+///////////////////////////////////////////////////////////////////// apuntes
+76 argumentos 
+    libreria YARGS  https://www.npmjs.com/package/yargs
+    el DT que esta al lado significa que esta hecho en JS pero que tiene un archivo con ñla definicion de tiposº    
+        npm i yargs 
+    es un paquete de terceros luego envolverlo !!!
+funcion async auto-invocadas
+OPCIONES DE YARGS
