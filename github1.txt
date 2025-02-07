@@ -39,5 +39,39 @@ Subir repository
 		use the command "git remote rm origin" 
 		despues volvi a intentar y funciono!!!!
 8 git push -u origin main
+	no me funcionaba 
+	  git push -u origin main
+		To https://github.com/astorniolo/NodeJS.git
+		! [rejected]        main -> main (fetch first)
+		error: failed to push some refs to 'https://github.com/astorniolo/NodeJS.git'
+		hint: Updates were rejected because the remote contains work that you do
+		hint: not have locally. This is usually caused by another repository pushing
+		hint: to the same ref. You may want to first integrate the remote changes
+		hint: (e.g., 'git pull ...') before pushing again.
+		hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+    hgo entonces un 
+		$ git pull  https://github.com/astorniolo/NodeJS.git  main
+		From https://github.com/astorniolo/NodeJS
+		* branch            main       -> FETCH_HEAD
+		fatal: refusing to merge unrelated histories
+	da ese errror
+	lo soluciono con   https://stackoverflow.com/questions/37937984/git-refusing-to-merge-unrelated-histories-on-rebase
+	haciendo
+	 $ git pull --allow-unrelated-histories   https://github.com/astorniolo/NodeJS.git  main
+		From https://github.com/astorniolo/NodeJS
+		* branch            main       -> FETCH_HEAD
+		Merge made by the 'ort' strategy.
 
-
+	y luego 
+	$  git push -u  origin main
+		Enumerating objects: 1560, done.
+		Counting objects: 100% (1560/1560), done.
+		Delta compression using up to 16 threads
+		Compressing objects: 100% (1497/1497), done.
+		Writing objects: 100% (1559/1559), 6.17 MiB | 2.96 MiB/s, done.
+		Total 1559 (delta 304), reused 0 (delta 0), pack-reused 0
+		remote: Resolving deltas: 100% (304/304), done.
+		To https://github.com/astorniolo/NodeJS.git
+		95cdc59..5cbd629  main -> main
+		branch 'main' set up to track 'origin/main'.
+	listo 

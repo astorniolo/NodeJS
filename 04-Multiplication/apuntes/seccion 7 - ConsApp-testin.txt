@@ -1,0 +1,43 @@
+Seccion 7  - Aplicacion de Consola -> testing
+
+tendniendo el codigo de la seccion 6 (https://github.com/Klerith/node-ts-multiplication-app/tree/fin-seccion-6)
+le aplicaremos lo necesario para realizar el testing
+
+Temas puntuales de la sección
+Esta sección de testing, tiene por objetivo probar todo lo visto hasta el momento, pero a la vez, necesitaremos aprender habilidades nuevas para poder probar casos particulares de nuestra aplicación de consola.Puntualmente veremos
+1-Pruebas sobre comandos de consola
+2-Cambiar dinámicamente los argumentos de consola
+3-Mocks
+4-Spies
+5-Mocks y Spies con retornos personalizados
+6-Pruebas cuando se esperan errores
+7-Pruebas de Casos de Uso
+8-Pruebas de integración
+9-Pruebas con funciones asíncronas anónimas auto-invocadas
+10-Pruebas con yargs
+11-Pruebas con creación de archivos y directorios
+12-Y más.....
+Esta sección es muy importante porque les dará más opciones para realizar su testing de todo lo que se planteén probar.
+
+//////////////////////////////////////
+93-configurando testing jest-ts
+-------------------------------
+
+Pasos para configurar Jest con TypeScript, en Node.Documentación oficial sobre Jest
+1-Instalaciones de desarrollo (super test es útil para probar Express)
+    npm install -D jest @types/jest ts-jest supertest
+2-Crear archivo de configuración de Jest
+    npx jest --init
+      YES-YES-NODE-YES-V8-NO (POR AHORA DESPUES MAS ADELANTE ES MUY UTIL)
+3-En el archivo jest.config.js configurar
+    preset: 'ts-jest',
+    testEnvironment: "jest-environment-node",
+
+    // Opcional - The paths to modules that run some code to configure or set up the testing environment before each test
+    // setupFiles: ['dotenv/config'],
+4- Crear scripts en el package.json
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+
+-----------------------------------
