@@ -1,0 +1,37 @@
+seccion 8
+a)sistema de monitoreo
+NOV Con ARQUITECTURA LIMPIA o centros de monitoreo
+muchas pantallas  sistema pendientes de su app si su bd se ca o su api rest se cae etc
+
+b)Temas puntuales de la sección
+Esta sección empezaremos la creación del NOC, y puntualmente tocaremos temas como:
+1-Introducción a la Arquitectura Limpia
+2-Introducción a la inyección de dependencias (DI - Dependency injection)
+3-JSON-Server
+4-Casos de Uso
+5-CRON Task - Tareas cronometradas
+Esta sección cuenta con una explicación de cómo lograremos el objetivo de la creación de nuestro sistema de monitoreo de forma global, que a lo largo de las próximas secciones lo haremos funcionar.
+
+c)NOC network operation center
+*EJECUTAR CODIGO EN MOMENTOS ESPECIDFICOS  (x hr, al fin del dia. los lunes etc )(el codigo puede ser esta pendient de la bd, si se pueden hacer inserciones,revisar endpoint, si endpoint esta arriba, si fna nuestro restfull api,problemas de idetif etc)
+*QUEREMOS MONITOREAR UNA API (lo bajamos lo subimos y grabamos logs de los sucesos en dif datasource ), CREAR TUS PCS DE MPONITOREO, ENVIAR CORREOS
+*GRABAR LOGS en datasoucers como  FILE SYSTEM - MONGOBD -POSTGRESQL
+lo vamos a hacer con arquitectura limpia  en capas : BD->PRESENTERS->CASOS USO->ENTITIES
+Entidades : LogEntity  (NIVEL SEGURIDAD- MENSAJE DE SUSCESO- CUANDO PASO) 
+CASOS DE USO :  Grabar logs   - Leer Logs por severidad - enviar mail 
+PRESENTADORES:   Consola
+BATABASE :  data source  fs, mongo, POSTGRESQL
+ARQUITECTURA LIMPIA   : consideraciones 
+    NO DEBERIA AFECTAR SI:
+        Cambiamos la BD
+        Cambiamos Motor de CORREOS
+        Añadimos  o eliminamos Tareas    (casos de uso reglas de negocio)
+        queremos trabajar con multiples origenes de datos    (SOLID)
+como lo logramos?
+App tolerante a cambios, facilmente expandible, reutilizable
+ENTIDADES  con constructor
+PATRON REPOSITORIOS       abstract class con la interface    
+REPOSITORIO   implementa  interface 
+CASOS DE USO   accede al repo
+
+

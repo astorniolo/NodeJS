@@ -1,0 +1,11 @@
+node_modules/
+
+*.log
+
+dist/
+
+outputs/
+custom-outputs/
+test-destination/
+
+.DS_Store

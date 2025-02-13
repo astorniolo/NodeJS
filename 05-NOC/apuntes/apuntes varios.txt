@@ -1,0 +1,41 @@
+clase 111 vamos a empezar a  realizar rtareas que se ejecutan periodicamente
+se podria hacese con set interval pero es ms complicado
+vamos a hacerlo con el paquete CRON (similar a linux)
+    npm i cron
+ojo siempre que haya un paquete de tercero necesitamos el patron adapter
+    CronService
+
+utilizacion del json server para montar un prototipo  rapidamente  con un crud api
+1-cremos u na carpeta aparte para un nuevo proyecto 
+2-npm init -y
+3-npm install json-server
+4-crear archivo db.json
+    {
+    "posts": [
+      { "id": "1", "title": "a title", "views": 100 },
+      { "id": "2", "title": "another title", "views": 200 }
+    ],
+    "comments": [
+      { "id": "1", "text": "a comment about post 1", "postId": "1" },
+      { "id": "2", "text": "another comment about post 1", "postId": "1" }
+    ],
+    "profile": {
+      "name": "typicode"
+    }
+  }
+5-levantar servidor
+    json-server --watch db.json
+6- ya se crearon endpints para post coment y profile lo cual es muy buenno xq en 5 minutos tenemos un servidor para prbar
+7- listo
+
+
+INYECCION DE DEPENDENCIAS
+coloca una dependenci en el caso de uso o data source
+la inyeccion de dependencia se hace en un constructor en typescrip
+    (ojo en JS se haria con un factory function que el buider del factory recibe la dependencia y luego crea la fn con la dependencia inyectada)
+    en ts es mas facil......
+en esta app usaremos 3 dependencias 
+una que quiero hacer si el caso de uso falla otra si sale bien
+
+
+no estan conveniendo tener los logs en consola  luego en la proxima veremos donde grabarlo 
