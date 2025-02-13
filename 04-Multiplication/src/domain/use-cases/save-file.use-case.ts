@@ -32,7 +32,7 @@ export class SaveFile implements SaveFileUseCase {
             return true
         }
         catch (error) {
-           console.log(error);
+           //console.log(error); esto deberiamos ponerlo en winstom para no crear mas ruido de lo nec
            return false; 
         }
     }

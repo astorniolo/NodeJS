@@ -28,6 +28,7 @@
     "typescript": "^5.7.3"
   },
   "dependencies": {
+    "latest-version": "^9.0.0",
     "yargs": "^17.1.1-candidate.0"
   }
 }
