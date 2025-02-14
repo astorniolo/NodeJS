@@ -1,10 +1,15 @@
 import { error } from "console";
 import { CheckService } from "../domain/use-cases/checks/checkService";
 import { CronService } from "./cron/cron-service";
+import { LogRepository } from "../domain/repository/log.repository";
+import { LogRepositoryImplementation } from "../infraestructure/repositories/log.repository.implementation ";
+import { FileSystemDataSource } from "../infraestructure/datasources/file-system.datasource";
 
 // import { ChildProcess } from "child_process"; esto tb lo tenemos seria como multi hilos pero vamos a usar el paquete
 
-
+const fileSystemLogRepository = new LogRepositoryImplementation(
+    new FileSystemDataSource()
+);
 
 export class Server{
     
@@ -18,10 +23,11 @@ export class Server{
             '*/5 * * * * *', 
             () => {
                 //new CheckService().execute('http://localhost:3000/posts');  //esto es una llamada a un servicio que no existe
-                const url= 'http://google.com'
+                const url= 'http://localhost:3000/posts'//'http://google.com'
                 new CheckService(
                     () => console.log(`${url} is ok...`),
-                    (error) => console.log('error...: ',error)
+                    (error) => console.log('error...: ',error),
+                    fileSystemLogRepository
                 ).execute(url);  //esto es una llamada a un servicio que no existe
                 
             }

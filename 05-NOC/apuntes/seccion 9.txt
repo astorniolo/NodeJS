@@ -1,0 +1,39 @@
+Proyecto NOC
+El objetivo es crear una serie de tareas usando Arquitectura Limpia con TypeScript
+----------------------------------
+Implementat ARQ LIMPIA
+patron repositorio , adsaptador
+ppio Dont repeat yourself
+CLEAN CODE
+testing
+Datasources= origen de Datos 
+generamemos nuestors LOGs
+CAPACIDAD de cambiar cq pieza del codigo  --> codigo flexible
+ARQ por CAPAS-----
+
+TEMAS PUNTUALES SECCION 9- CLEAN ARQUITECTURE -REPOSITORY
+Temas puntuales de la sección
+En esta sección trabajaremos con el patron "Repository" para poder construir una forma intercambiable de orígenes de datos.
+
+Puntualmente veremos:
+1-Entidades
+2-DataSources
+3-Repositorios
+4-Clases Abstractas
+5-Implementaciones
+6-Variables de entorno
+7-Validación de variables de entorno.
+
+Es una sección muy importante, especialmente por la configuración de variables de entorno, ya que esto es lo que permite cambiar la aplicación si estamos en producción, staging, testing o development.
+------------------------------------------
+repository pattern   dibujo de https://velog.io/@201/mvvmarchitecture
+
+FLUYE :   caso de uso -> repositorio   ->  datasource
+----------------
+domain todo lo que rige el dominio de su empresa.... reglas de negocio
+tb van entities o models
+en domain van las reglas de tod
+
+tenemos las carpetas de datasource y repository ... pero ac a no va la implementacion sino simplemente van las reglas
+de como queremos q nuestros origenes de datos fn 
+------------
